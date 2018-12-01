@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+html{height: 100%;}
+body{width: 100%; height: 100%; background-image: url('./assets/orion-nebula-11107.jpg'); background-size: cover;
+background-repeat: no-repeat; font-family: 'Luckiest Guy', cursive; background-attachment: fixed;}

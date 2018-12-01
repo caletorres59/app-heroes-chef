@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="container">
+    <div  class="item" *ngFor='let hero of heroes | paginate: { itemsPerPage: 9, currentPage: p }'>
+     
+        <div class="card" style="width: 18rem;">
+            <a routerLink="/detail/{{hero.name}}">
+          <img class="card-img-top img-responsive" src="{{hero.picture}}" alt="Card image cap">
+        </a>
+          <div class="card-body">
+            <div class="buttons-heroes">
+              <span (click)="countLikeS(this.hero)" href=""><i class="far fa-thumbs-up"></i><span *ngIf="hero.likes > 0">{{hero.likes}}</span></span>
+              <a href=""><i class="far fa-thumbs-down"></i><span>2</span></a>
+            </div>
+          </div>
+        </div>
+      
+      
+    
+        </div>
+    <div class="pagination"><pagination-controls (pageChange)="p = $event"></pagination-controls></div>
+    
+  
+  </div>
+
+</div>

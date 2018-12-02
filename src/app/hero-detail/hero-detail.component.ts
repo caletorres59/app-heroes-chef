@@ -24,9 +24,13 @@ export class HeroDetailComponent implements OnInit {
     this.getHero();
   }
   
+  /**
+   *Metodo que me permite obtener los datos por medio del nombre del superheroe seleccionado
+   */
+  
   getHero(): void
   {
-    let name = this.route.snapshot.paramMap.get('name');
+      let name = this.route.snapshot.paramMap.get('name');
       this.heroService.getHeroes().subscribe(content => { 
       this.heroes = content.filter(hero  => hero.name === name);
       this.hero = this.heroes[0];
@@ -34,7 +38,9 @@ export class HeroDetailComponent implements OnInit {
   
     
   }
-
+/*
+ * Metodo que me permite regresar al listado de heroes
+*/ 
   goBack(): void {
     this.location.back();
   }

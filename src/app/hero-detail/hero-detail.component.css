@@ -1,3 +1,31 @@
-.content-hero-single{display:flex; justify-content:center; align-items: center; height: 100%;}
-.hero{width: 70%; display: flex; background: #FFF;height: 300px;}
+/*Style Hero*/
+.content-hero-single{display:flex; justify-content:center; align-items: center; height: 100%;flex-direction: column;}
+.hero{width: 70%; display: flex; background:rgba(0,0,0,0.7); height: 50%;}
 .hero img{width: 30%;}
+.items-hero{display:flex; flex-direction:column;width: 100%;}
+.name-hero{display: flex; justify-content: space-between;    width: 100%;}
+.name-hero .publi{ background:rgb(145, 228, 123,0.6);padding: 1%; border-radius: 0 0 0 15px;; -webkit-border-radius: 0 0 0 15px; -moz-border-radius: 0 0 0 15px; -ms-border-radius: 0 0 0 15px; -o-border-radius: 0 0 0 15px; color:#fff;font-family: 'Black Han Sans', sans-serif; font-weight: 700; }
+.name-hero h1.name-h{color: #fff; padding: 2%; font-weight: 700; font-style: normal;
+    text-shadow: 0 0 5px #FFF, 0 0 8px #FFF, 0 0 10px #FFF, 0 0 10px #49ff18, 0 0 10px #49FF18;}
+
+.info-h{display: flex; justify-content: center;flex-direction: column;align-items: center; height: 100%;}
+.info-h p{height: 60%; font-size: 16px; color: #fff; font-weight: 400; width: 60%;padding: 2%; border:1px solid #49FF18;margin: 0; text-align: center;}
+a.back{width: 100%;display:block; padding: 1.5%; text-align: center; font-size: 1rem; font-weight: 700; color: #000; background-color: rgba(255,255,255,0.6);font-family: 'Concert One',cursive; cursor: pointer;}
+
+a.back i{color: #49FF18;}
+.back-content{width:70%;}
+
+/*Media Querys*/
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .hero{flex-direction: column; height: auto;}
+    .hero img{width: 100% !important;}
+    .name-hero{flex-direction: column; justify-content: center;}
+    .name-hero h1,.name-hero h2{text-align: center;}
+    .info-h{justify-content: center;}
+    .info-h p{width: 100% !important;}
+    .name-hero .publi{ border-radius:0 !important; -webkit-border-radius:0 !important; -moz-border-radius:0 !important; -ms-border-radius:0 !important; -o-border-radius:0 !important; }
+    .info-h p{text-align: center;}
+    
+  }
+

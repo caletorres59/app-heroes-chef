@@ -1,9 +1,36 @@
 .container{display: flex; flex-wrap: wrap; justify-content: center;}
-.container div.item{width: 30%; /*height: 250px*/; margin: 5px;}
+.container div.item{width: 30%; /*height: 250px*/; margin: 5px; display:flex; justify-content:center;}
 .container div.item > a{display: flex; justify-content: center;}
 
-.card{width: 70% !important; padding: 2% 2% 0% 2%;}
+.card{width: 60% !important;padding: 2% 2% 0% 2%;}
+.card:hover{-webkit-box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
+    -moz-box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
+    box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
+    border:2px solid rgba(0,228,123);}
 .card-body{padding: 0;}
 .buttons-heroes{display: flex; justify-content: space-between;}
-div.pagination{width: 100%;display: flex; justify-content: center;}
+div.pagination{width: 50%;display: flex; justify-content: center; background:rgb(145, 228, 123,0.6); margin: 5% 0; align-items: center;}
+i.green{color: rgba(0,228,123);}
+i.red{color: #E23237}
+
+
+/*Media Querys*/
+@media (min-width: 481px) and (max-width: 767px) {
+  
+   
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .container{flex-direction: column; padding: 0;}
+    .item{width: 100% !important;}
+    .pagination{width: 100% !important; justify-content: center;}
+    
+  }
 

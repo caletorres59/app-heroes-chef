@@ -1,17 +1,23 @@
 
 <div class="content-hero-single">
-  <div class="hero">
-      <img src="{{hero?.picture}}" alt="">
-      <div class="items-hero">
-          <div class="name-hero">
-              <h1>{{hero?.name}}</h1>
-              <h2>{{hero?.publisher}}</h2>
-            </div>
-            <p>{{hero?.info}}</p>
-            <a (click)="goBack()">Volver</a>
+  
+      <div class="hero">
+          <img src="{{hero?.picture}}" alt="" class="img-responsive">
+          <div class="items-hero">
+              <div class="name-hero">
+                  <h1 class="name-h">{{hero?.name}}</h1>
+                  <h2 class="publi">{{hero?.publisher}}</h2>
+                </div>
+                <div class="info-h"><p>{{hero?.info}}</p></div>
+        </div>
+         
       </div>
-    
-  </div>
-</div>
+        
+      <div class="back-content"><a (click)="goBack()" class="back"><i class="fas fa-angle-double-left"></i> LISTA DE HEROES</a></div>
+ 
 
+  </div>
+
+ 
+  
 

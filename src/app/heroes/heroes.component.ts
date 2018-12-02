@@ -10,55 +10,51 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
 
+  /*Content Heroes*/
   heroes: Hero[] = [];
-  cont: number = 0;
+ 
   constructor(public serviceHeroes: HeroesService) {
     
-    this.serviceHeroes.getHeroes().subscribe(content => {
-    this.heroes = content;
-    console.log(this.heroes);
-    })
+    
+    
    }
 
   ngOnInit() {
+    /*Inicio lista de heroes*/
+    
+    this.getHeroes();
   }
-  countLikeS(hero:Hero)
+/**
+ * Metodo que me permite realizar la subscripcion para obtener los datos del servicio
+ *
+ */
+  getHeroes(): void
+  {
+    this.serviceHeroes.getHeroes().subscribe(content => {
+      this.heroes = content;
+    });
+  }
+  
+/**
+ *Metodo que me permite almacenar en el localStorage la cantida de likes de un usuario
+ */
+  countLikeS(hero:Hero,action:string)
   {
   
-
-let nameHero = hero.name;
-let datos = localStorage.cantidad==null?[]:JSON.parse(localStorage.getItem('cantidad'));
-let resultados = datos.find(e => e.name == nameHero);
-if(resultados == undefined){
-  
-  console.log(nameHero );
-  let add = { name: hero.name, likes: 1 }; 
-  datos.push(add);
-  console.log(datos);
-}else{
-
-  resultados.likes = 3;
-
-  localStorage.cantidad = JSON.stringify(datos);
-
-  console.log(datos);
-
-}
-    
-    // hero.likes = 0;
-    // let datos = localStorage.setItem("cantidad", JSON.stringify(hero));
-    // hero = JSON.parse(localStorage.getItem("cantidad"));
-    // console.log(hero.likes);
-    
-    // if (hero.likes > 0)
-    // {
-    //   hero.likes++;
-    //   localStorage.setItem("cantidad", JSON.stringify(datos));
-    //   console.log(datos);
-    // } else
-    // {
-     
-    // }
    
+    hero.name;
+    let datos = "";// localStorage.cantidad==null?[]:JSON.parse(localStorage.getItem('cantidad'));
+   
+    let res = JSON.parse(localStorage.getItem(hero.name));
+    console.log(res);
+    if (res == undefined)
+    {
+      localStorage.setItem(hero.name, JSON.stringify({ likes: 1}));
+      hero.likes = 1;
+    } else
+    {
+      let cant = hero.likes += 1;
+      localStorage.setItem(hero.name, JSON.stringify({ likes: cant }));
+    }
   }
 }

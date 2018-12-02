@@ -1,6 +1,10 @@
-.title{text-align: center; padding: 1% 0; color: #fff; font-weight: 700;
-
-    text-shadow: -5px 5px 0px #fff, -10px 10px 0px #0E0631, -15px 15px 0px #0E0631;
-    color: #fff; font-size: 3rem;
+.title{text-align: center; padding: 1% 0; font-weight: 700;font-size: 3.5rem;
+    color: #FFFFFF;
+background: rgba(0,0,0,0.7);
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+margin-bottom: 10px;
     }
+ 
+
+
 

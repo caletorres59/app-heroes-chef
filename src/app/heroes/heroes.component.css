@@ -2,7 +2,10 @@
 .container div.item{width: 30%; /*height: 250px*/; margin: 5px; display:flex; justify-content:center;}
 .container div.item > a{display: flex; justify-content: center;}
 
-.card{width: 60% !important;padding: 2% 2% 0% 2%;}
+.publi h4{font-weight: 700; font-size: 16px; color: rgba(0,228,123);}
+.publi h6{text-align: right; background: rgba(0,228,123,0.2); color: #fff;}
+.info{font-size: 13px; color: #fff; font-weight: 300;padding: 3px;}
+.card{width: 100% !important;padding: 2% 2% 0% 2%; background: rgba(0,0,0,0.8)}
 .card:hover{-webkit-box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
     -moz-box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
     box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
@@ -12,6 +15,9 @@
 div.pagination{width: 50%;display: flex; justify-content: center; background:rgb(145, 228, 123,0.6); margin: 5% 0; align-items: center;}
 i.green{color: rgba(0,228,123);}
 i.red{color: #E23237}
+div.content-flex{display: flex;}
+div.content-flex a{width: 40%; display: flex; justify-content: center; align-items: center;}
+div.content-flex a > img { width:120px;height: 120px;; border-radius:50% ; -webkit-border-radius:50% ; -moz-border-radius:50% ; -ms-border-radius:50% ; -o-border-radius:50% ; }
 
 
 /*Media Querys*/

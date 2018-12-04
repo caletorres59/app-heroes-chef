@@ -23,6 +23,7 @@ export class HeroesComponent implements OnInit {
     /*Inicio lista de heroes*/
     
     this.getHeroes();
+    localStorage.clear();
   }
 /**
  * Metodo que me permite realizar la subscripcion para obtener los datos del servicio

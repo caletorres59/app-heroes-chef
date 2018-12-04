@@ -20,7 +20,7 @@
             </div>
               <div class="buttons-heroes">
                 <span (click)="countLikeS(this.hero,'likes')"><i class="far fa-thumbs-up green"></i><span *ngIf="hero.likes > 0">{{hero.likes}}</span></span>
-                <span (click)="countLikeS(this.hero,'dislike')"><i class="far fa-thumbs-down red"></i><span>{{hero.dislikes}}</span></span>
+                <span (click)="countLikeS(this.hero,'dislike')"><i class="far fa-thumbs-down red"></i><span *ngIf="hero.dislikes > 0">{{hero.dislikes}}</span></span>
               </div>
             </div>
           </div>

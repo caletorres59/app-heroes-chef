@@ -11,7 +11,7 @@
     box-shadow: 22px -15px 50px -21px rgba(145,228,123,0.68);
     border:2px solid rgba(0,228,123);}
 .card-body{padding: 0;}
-.buttons-heroes{display: flex; justify-content: space-between;}
+.buttons-heroes{display: flex; justify-content: space-between; color: #fff;}
 div.pagination{width: 50%;display: flex; justify-content: center; background:rgb(145, 228, 123,0.6); margin: 5% 0; align-items: center;}
 i.green{color: rgba(0,228,123);}
 i.red{color: #E23237}

@@ -44,18 +44,42 @@ export class HeroesComponent implements OnInit {
   
    
     hero.name;
+    let res = "";
     let datos = "";// localStorage.cantidad==null?[]:JSON.parse(localStorage.getItem('cantidad'));
-   
-    let res = JSON.parse(localStorage.getItem(hero.name));
+    if (action == 'likes')
+    {
+      res = JSON.parse(localStorage.getItem(hero.name));
+    } else
+    {
+      res = JSON.parse(localStorage.getItem(hero.name+action));
+   }
+    
     console.log(res);
     if (res == undefined)
     {
-      localStorage.setItem(hero.name, JSON.stringify({ likes: 1}));
+      if (action == 'likes')
+      {
+        localStorage.setItem(hero.name, JSON.stringify({ likes: 1}));
       hero.likes = 1;
+      } else
+      {
+        localStorage.setItem(hero.name+action, JSON.stringify({ dislikes: 1}));
+        hero.dislikes = 1;
+        }
+      
     } else
     {
+      if (action == 'likes')
+      {
       let cant = hero.likes += 1;
       localStorage.setItem(hero.name, JSON.stringify({ likes: cant }));
+      } else
+      {
+        let cantdis = hero.dislikes += 1;
+        localStorage.setItem(hero.name+action, JSON.stringify({ dislikes: cantdis }));
+        
+        }
+      
     }
   }
 }
